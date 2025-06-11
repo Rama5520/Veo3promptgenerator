@@ -146,4 +146,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById('output-en').textContent = promptEN;
     });
+
+    document.getElementById('reset-btn').addEventListener('click', function() {
+        const formElements = document.querySelectorAll('.form-container input, .form-container textarea, .form-container select');
+        formElements.forEach(el => {
+            if (el.tagName === 'SELECT') {
+                el.selectedIndex = 0;
+            } else {
+                el.value = '';
+            }
+        });
+
+        document.getElementById('output-id').value = '';
+        document.getElementById('output-en').textContent = '';
+    });
 }); 
