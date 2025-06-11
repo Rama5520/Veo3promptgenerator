@@ -7,6 +7,22 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b53c3e7f-1e34-4a43-85e8-d2a9379b631c/d8t57wl-15024254-ca74-4b53-ae16-7f55b9319815.jpg/v1/fill/w_1024,h_878,q_75,strp/java_garden_batik_digital_paper_pack_by_digitalcurio_d8t57wl-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIZzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODc4IiwicGF0aCI6IlwvZlwvYjUzYzNlN2YtMWUzNC00YTQzLTg1ZTgtZDJhOTM3OWI2MzFjXC9kOHQ1N3dsLTE1MDI0MjU0LWNhNzQtNGI1My1hZTE2LTdmNTViOTMxOTgxNS5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.qJ7T_2b7q6w5kMIhGg2sWj9aQ_I-Vl92s3g88y1J-bE');
+    background-repeat: repeat;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .container {
