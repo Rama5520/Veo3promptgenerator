@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo 3 Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Veo 3 Consistent Character Prompt Generator</h1>
+        <p>Buat prompt sinematik untuk Veo 3 dengan karakter yang konsisten.</p>
+        
+        <div class="form-container">
+            <div class="column">
+                <label for="judul">1. Judul Scene</label>
+                <input type="text" id="judul" placeholder="Contoh: Terminal bus malam">
+
+                <label for="karakter">2. Deskripsi Karakter Inti</label>
+                <textarea id="karakter" rows="8" placeholder="Contoh: Seorang vlogger wanita muda asal Minang berusia 27 tahun.&#10;Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm..."></textarea>
+
+                <label for="suara">3. Detail Suara Karakter</label>
+                <textarea id="suara" rows="6" placeholder="Contoh: Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat.&#10;Nada: mezzo-soprano..."></textarea>
+
+                <label for="aksi">4. Aksi Karakter</label>
+                <textarea id="aksi" rows="3" placeholder="Contoh: berjalan di sekitar terminal bus malam..."></textarea>
+                
+                <label for="ekspresi">5. Ekspresi Karakter</label>
+                <textarea id="ekspresi" rows="3" placeholder="Contoh: Karakter menunjukkan ekspresi kagum dan antusias..."></textarea>
+
+                <label for="latar">6. Latar Tempat & Waktu</label>
+                <textarea id="latar" rows="4" placeholder="Contoh: latar tempat: di terminal bus antar kota malam hari..."></textarea>
+            </div>
+            <div class="column">
+                <label for="visual">7. Detail Visual Tambahan</label>
+                <textarea id="visual" rows="4" placeholder="Pencahayaan: natural dari lampu jalan...&#10;Gaya Video/Art Style: cinematic realistis..."></textarea>
+
+                <label for="kamera">Gerakan Kamera</label>
+                <select id="kamera">
+                    <option value="">Pilih Gerakan Kamera</option>
+                    <!-- Opsi akan ditambahkan di sini -->
+                </select>
+                
+                <label for="suasana">8. Suasana Keseluruhan</label>
+                <textarea id="suasana" rows="3" placeholder="Contoh: Suasana sibuk, ramai, dengan kesan perjalanan malam..."></textarea>
+
+                <label for="ambience">9. Suara Lingkungan/Ambience</label>
+                <textarea id="ambience" rows="3" placeholder="Contoh: SOUND: suara mesin bus menyala..."></textarea>
+                
+                <label for="dialog">10. Dialog Karakter (dalam Bahasa Indonesia)</label>
+                <textarea id="dialog" rows="3" placeholder="Contoh: DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini..."></textarea>
+
+                <label for="negatif">11. Negative Prompt</label>
+                <textarea id="negatif" rows="4" placeholder="Contoh: Hindari: teks di layar, subtitle, tulisan di video..."></textarea>
+            </div>
+        </div>
+        <button id="generate-btn">Generate Prompt</button>
+
+        <div class="output-container">
+            <div class="output-column">
+                <h2>Prompt Bahasa Indonesia (Dapat Diedit)</h2>
+                <textarea id="output-id" rows="15"></textarea>
+            </div>
+            <div class="output-column">
+                <h2>Final Prompt (English)</h2>
+                <div id="output-en-container">
+                    <p id="output-en"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
